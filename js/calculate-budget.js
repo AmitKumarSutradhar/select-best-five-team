@@ -3,6 +3,8 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const budgetPerPlayerString = budgetPerPlayerElement.value;
     const budgetPerPlayer = parseFloat(budgetPerPlayerString);
 
+    budgetPerPlayerElement.value = '';
+
 
     const totalPlayerExpenses = budgetPerPlayer * 5;
 
@@ -14,16 +16,25 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
 })
 
+
 document.getElementById('btn-calculate-total').addEventListener('click',function(){
+    const totalExpensAmountElement = document.getElementById('total-expens');
+    const totalExpensAmountString = totalExpensAmountElement.innerText;
+    const totalExpensAmount = parseFloat(totalExpensAmountString);
+
     const managerAmountElement = document.getElementById('manager-field');
     const managerAmountString = managerAmountElement.value;
     const managerAmount = parseFloat(managerAmountString);
 
-    const coachAmountElement = document.getElementById('manager-field');
+    const coachAmountElement = document.getElementById('coach-field');
     const coachAmountString = coachAmountElement.value;
     const coachAmount = parseFloat(coachAmountString);
 
-    const finalTotalAmount =  managerAmount + coachAmount;
+    const finalTotalAmount = managerAmount + coachAmount + totalExpensAmount;
+
+    // Clear Input Field Value After Calculate 
+    managerAmountElement.value = '';
+    coachAmountElement.value = '';
 
     const finalCalculationElement = document.getElementById('final-total');
     const finalTotal = finalCalculationElement.innerText;
