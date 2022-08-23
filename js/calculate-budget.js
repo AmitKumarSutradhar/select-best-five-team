@@ -1,8 +1,10 @@
+// Calculate Budget for per player
 document.getElementById('btn-calculate').addEventListener('click', function (selectedPlayerList){
     const budgetPerPlayerElement = document.getElementById('budgetPerPlayer');
     const budgetPerPlayerString = budgetPerPlayerElement.value;
     const budgetPerPlayer = parseFloat(budgetPerPlayerString);
-
+    
+    // Clear Input Field Value After Calculate
     budgetPerPlayerElement.value = '';
     
     const playerNameNumber = selectedPlayer.length;
@@ -17,6 +19,7 @@ document.getElementById('btn-calculate').addEventListener('click', function (sel
 
 })
 
+// Calculate Total Cost
 document.getElementById('btn-calculate-total').addEventListener('click',function(){
     const totalExpensAmountElement = document.getElementById('total-expens');
     const totalExpensAmountString = totalExpensAmountElement.innerText;

@@ -5,7 +5,9 @@ header{
     height: 80vh;
     background-image: url(/images/hero-bg.png);
 }
-#player-info, .seclect-five ,.calculate-budget{
+#player-info, 
+.seclect-five ,
+.calculate-budget{
     background-color: #000!important;
 }
 .seclect-five ,

@@ -1,8 +1,8 @@
 const selectedPlayer = [];
 
-function displayPlayerName(selectedPlayerList) {
 
-    // console.log(selectedPlayerList.length);
+// Select Player For list Function 
+function displayPlayerName(selectedPlayerList) {
 
     const playerListItem = document.getElementById('selected-player-list');
     playerListItem.innerHTML = ('');
