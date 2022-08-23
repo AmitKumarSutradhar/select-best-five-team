@@ -17,7 +17,6 @@ document.getElementById('btn-calculate').addEventListener('click', function (sel
 
 })
 
-
 document.getElementById('btn-calculate-total').addEventListener('click',function(){
     const totalExpensAmountElement = document.getElementById('total-expens');
     const totalExpensAmountString = totalExpensAmountElement.innerText;
