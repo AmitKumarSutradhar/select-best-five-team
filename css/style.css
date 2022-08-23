@@ -17,6 +17,11 @@ header{
     color: #fff;
     padding: 10px 80px;
 }
+.btn-calculate{
+    background-color: #015196;
+    color: #fff;
+    padding: 10px 60px;
+}
 .btn-player:disabled{
         background-color: gray;
 }

@@ -42,7 +42,3 @@ document.getElementById('btn-calculate-total').addEventListener('click',function
 
     finalCalculationElement.innerText = finalTotalAmount;
 })
-
-
-
-// console.log('Hello From calculate JS');
