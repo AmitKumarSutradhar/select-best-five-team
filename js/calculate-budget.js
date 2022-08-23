@@ -3,9 +3,11 @@ document.getElementById('btn-calculate').addEventListener('click', function (sel
     const budgetPerPlayerString = budgetPerPlayerElement.value;
     const budgetPerPlayer = parseFloat(budgetPerPlayerString);
 
-    budgetPerPlayerElement.value = ''; 
+    budgetPerPlayerElement.value = '';
+    
+    const playerNameNumber = selectedPlayer.length;
 
-    const totalPlayerExpenses = budgetPerPlayer * 5;
+    const totalPlayerExpenses = budgetPerPlayer * playerNameNumber;
 
     const playerExpensesElement = document.getElementById('total-expens');
     const playerExpenses = playerExpensesElement.innerText;
