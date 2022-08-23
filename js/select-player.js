@@ -1,12 +1,13 @@
 const selectedPlayer = [];
 
-function displayPlayerName(selectedPlayerList){
-    console.log(selectedPlayerList);
+function displayPlayerName(selectedPlayerList) {
+    
+    // console.log(selectedPlayerList.length);
 
     const playerListItem = document.getElementById('selected-player-list');
     playerListItem.innerHTML = ('');
 
-    for (let i = 0; i < selectedPlayerList.length; i++){
+    for (let i = 0; i < selectedPlayerList.length; i++) {
         // console.log(selectedPlayer[i]);
         const playerSelected = selectedPlayer[i];
 
@@ -17,11 +18,16 @@ function displayPlayerName(selectedPlayerList){
     }
 }
 
-function selectPlayer(element){
+function selectPlayer(element) {
     const playerName = element.parentNode.children[0].innerText;
+    
 
     selectedPlayer.push(playerName);
 
     displayPlayerName(selectedPlayer);
-}
 
+    if (selectedPlayerList.length < 5) {
+        element.disabled = true;
+    }
+    return selectPlayer;
+}

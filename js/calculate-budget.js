@@ -1,10 +1,9 @@
-document.getElementById('btn-calculate').addEventListener('click',function(){
+document.getElementById('btn-calculate').addEventListener('click', function (selectedPlayerList){
     const budgetPerPlayerElement = document.getElementById('budgetPerPlayer');
     const budgetPerPlayerString = budgetPerPlayerElement.value;
     const budgetPerPlayer = parseFloat(budgetPerPlayerString);
 
-    budgetPerPlayerElement.value = '';
-
+    budgetPerPlayerElement.value = ''; 
 
     const totalPlayerExpenses = budgetPerPlayer * 5;
 
